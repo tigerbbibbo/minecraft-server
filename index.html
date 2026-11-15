@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="환전소에서 금화를 모으고 청크를 사서 친구들과 나라를 세우는 마인크래프트 자바판 서버.">
+<title>Crownlands SMP</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#101710;color:#f3f1dc;font:16px/1.7 system-ui,sans-serif}a{color:inherit;text-decoration:none}header,section,footer{padding-inline:max(6vw,24px)}header{height:75px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #34412d}header strong{letter-spacing:.12em}nav{display:flex;gap:25px;color:#bdc7ae}.hero{min-height:590px;display:grid;align-items:center;background:linear-gradient(90deg,#101710 2%,#101710ed 22%,#10171038 100%),url(hero.png) center/cover,#253920}.hero p{max-width:480px;color:#e0e5cf}.edition{color:#d4f28f;letter-spacing:.19em;font-size:13px;font-weight:800}h1,h2,p{margin:0}h1{font-size:clamp(53px,9vw,120px);font-weight:950;line-height:.92;letter-spacing:-.07em;margin:20px 0 24px}h1 span{color:#cbea83}button{font:inherit;font-weight:800;cursor:pointer;background:#cbea83;color:#182214;border:0;padding:12px 20px;border-radius:5px}.hero button{margin-top:26px}code{overflow-wrap:anywhere;color:#d4f28f}.section{padding-block:65px}h2{font-size:clamp(30px,5vw,53px);line-height:1.2;margin-bottom:22px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{padding:24px;background:#1b2619;border:1px solid #3b4a32;border-top:3px solid #bcd777}.card h3{margin:0 0 9px}.card p,.steps li,footer{color:#bdc7ae}.steps{padding-left:24px}.steps li{padding:8px}.connect{background:#1b2619;border-block:1px solid #3b4a32}.connect button{margin:12px 0}footer{padding-block:22px;font-size:14px}#status{min-height:1.7em}button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:4px}@media(max-width:650px){nav{gap:12px;font-size:13px}.grid{grid-template-columns:1fr}.hero{min-height:510px}.section{padding-block:40px}}
+</style>
+<header><a href="#"><strong>◆ Crownlands</strong></a><nav aria-label="주 메뉴"><a href="#world">서버 소개</a><a href="#join">접속 방법</a></nav></header>
+<main>
+<section class="hero"><div><div class="edition">MINECRAFT JAVA EDITION 26.3</div><h1>Crownlands<br><span>SMP</span></h1><p>환전소에서 금화를 모으고, 내 청크에 기지를 지으세요. 친구들과 함께 나라를 세울 수 있는 자바판 서바이벌 서버예요.</p><a href="#join" style="display:inline-block;margin-top:25px;background:#cbea83;color:#182214;padding:12px 20px;border-radius:5px;font-weight:800">서버 접속하기 ↓</a><p style="margin-top:12px;font-size:12px">마인크래프트 스타일 콘셉트 이미지</p></div></section>
+<section class="section" id="world"><h2>서버에서 할 수 있는 일</h2><div class="grid">
+<article class="card"><h3>금화와 환전소</h3><p>환전소 금 블록을 우클릭해 다이아몬드 10개를 금화 1개로 바꾸세요. 환전소 나침반을 우클릭하면 가까운 환전소 좌표가 채팅에 떠요.</p></article>
+<article class="card"><h3>청크 구매와 판매</h3><p>청크 관리 잔디 블록을 우클릭해 인벤토리 메뉴를 여세요. 금화 5개로 현재 청크를 사거나, 내가 산 청크를 팔고 금화 5개를 돌려받을 수 있어요.</p></article>
+<article class="card"><h3>국가 설립과 외교</h3><p>국가 관리 베드락으로 메뉴를 여세요. 설립에 5명 이상이 동의하고 제안자가 금화 300개를 내면, 미리 정한 위치에 5×5 청크의 국가 영토가 생겨요.</p></article>
+</div></section>
+<section class="section connect" id="join"><h2>서버에 접속하기</h2><code id="address">scooter-spreading.tun.ply.gg</code><br><button id="copy">주소 복사</button><p id="status" role="status"></p><ol class="steps"><li>관리자에게 자바판 닉네임을 알려 화이트리스트에 등록하세요.</li><li>마인크래프트 자바판 26.3을 실행하고 <strong>멀티플레이 → 직접 연결</strong>을 선택하세요.</li><li>복사한 주소를 붙여넣고 접속하세요. 서버 PC와 Playit이 실행 중일 때 접속할 수 있어요.</li></ol></section>
+</main><footer>Crownlands SMP</footer>
+<script>
+document.querySelector('#copy').addEventListener('click',async()=>{
+ const address=document.querySelector('#address');
+ const status=document.querySelector('#status');
+ try{await navigator.clipboard.writeText(address.textContent);status.textContent='서버 주소를 복사했어요.'}
+ catch{const range=document.createRange();range.selectNodeContents(address);const selection=getSelection();selection.removeAllRanges();selection.addRange(range);status.textContent='선택된 주소를 Ctrl+C로 복사하세요.'}
+});
+</script>
+</html>
+
