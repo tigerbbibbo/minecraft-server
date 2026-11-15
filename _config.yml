@@ -1,0 +1,15 @@
+title: Crownlands SMP
+description: 친구들과 금화를 모으고 영토를 넓히는 마인크래프트 자바판 서바이벌 서버
+url: https://tigerbbibbo.github.io
+baseurl: /minecraft-server
+lang: ko
+remote_theme: samarsault/texture@593476327d10f93220d1fcb16fa235e47b6f0f19
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+texture:
+  title: Crownlands SMP
+  tagline: 마인크래프트 자바판 26.3 · 서바이벌
+  style: black
+  showNav: false
+  showPicker: false
